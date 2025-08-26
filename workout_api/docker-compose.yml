@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:17.6-alpine
+    environment:
+      POSTGRES_PASSWORD: workout
+      POSTGRES_USER: workout
+      POSTGRES_DB: workout
+    ports:
+      - "5432:5432"
+    volumes:
+      - workout:/var/lib/postgresql/data
+
+volumes:
+  workout:
